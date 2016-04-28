@@ -2,7 +2,7 @@ from charms.reactive import when, when_not, set_state
 
 
 @when_not('${metadata.package}.installed')
-def install_${metadata.package}():
+def install_${metadata.package.replace('-', '_')}():
     #raw
     # Do your setup here.
     #
