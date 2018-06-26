@@ -1,4 +1,4 @@
-from charms.reactive import when, when_not, set_state
+from charms.reactive import when, when_not, set_flag
 
 
 @when_not('${metadata.package}.installed')
@@ -16,4 +16,4 @@ def install_${metadata.package.replace('-', '_')}():
     #  * https://github.com/juju-solutions/layer-basic#overview
     #
     #end raw
-    set_state('${metadata.package}.installed')
+    set_flag('${metadata.package}.installed')
